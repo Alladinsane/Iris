@@ -5,10 +5,10 @@ aside{
 	left: 0;
 	bottom: 0;
 	z-index: 96;
-	background: $darkest_grey;
+	background: $white;
 	width: 220px;
 	overflow: hidden;
-	box-shadow: inset -20px 0px 30px -20px rgba(0, 0, 0, 0.5);
+	border-right: 1px solid $faint_grey;
 
 	.liner {
 		overflow-y: auto;
@@ -71,12 +71,15 @@ aside{
 		padding-top: 8px;
 
 		a {
+			@include animate(0.1s);
 			font-size: 16px;
-			color: #FFFFFF;
+			color: $black;
 			text-decoration: none;
 			display: block;
-			padding: 6px 18px 6px 14px;
-			border-left: 4px solid transparent;
+			padding: 12px 18px 12px 14px;
+			border-top: 1px solid $faint_grey;
+			border-bottom: 1px solid $faint_grey;
+			margin-top: -1px;
 
 			.icon {
 				height: 14px;
@@ -86,17 +89,16 @@ aside{
 			}
 
 			&.active {
-				border-color: $turquoise;
-				background: rgba( 0, 0, 0, 0.5 );
+				font-weight: bold;
 			}
 
 			&[disabled] {
-				opacity: 0.3;
+				color: $mid_grey;
 				cursor: not-allowed;
 			}
 
 			&:hover:not([disabled]) {
-				background: rgba( 255, 255, 255, 0.1 );
+				background: rgba( 0, 0, 0, 0.05 );
 			}
 		}
 
@@ -109,12 +111,9 @@ aside{
 				font-size: 11px;
 				text-transform: uppercase;
 				opacity: 0.5;
-				color: #FFFFFF;
+				color: $mid_grey;
 			}
 		}
 
-	}
-
-	@include responsive( $bp_medium ){
 	}
 }
