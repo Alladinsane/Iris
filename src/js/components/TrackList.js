@@ -108,7 +108,7 @@ class TrackList extends React.Component{
 				break
 
 			case 'default':
-				if (!this.state.tracks[index].selected && !this.isRightClick(e) && !e.ctrlKey){
+				if (!this.state.tracks[index].selected && !e.ctrlKey){
 					this.toggleTrackSelections(e, index)
 				}
 				break
@@ -152,7 +152,6 @@ class TrackList extends React.Component{
 		if (native_event && this.triggerType(e) != 'default'){
 			return false
 		}
-
 		var selected_tracks = this.selectedTracks()
 		var data = {
 			e: e,
