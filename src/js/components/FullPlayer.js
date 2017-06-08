@@ -49,7 +49,7 @@ class FullPlayer extends React.Component{
 	renderRandomButton(){
 		var button = <a className="has-tooltip" onClick={() => this.props.mopidyActions.instruct('tracklist.setRandom', [true])}><FontAwesome name="random" /><span className="tooltip">Shuffle</span></a>
 		if( this.props.random ){
-			button = <a className="active has-tooltip" onClick={() => this.props.mopidyActions.instruct('tracklist.setRandom', [false])}><FontAwesome name="random" /><span className="tooltip">Shuffle</span></a>
+			button = <a className="active has-tooltip" onClick={() => this.props.mopidyActions.instruct('tracklist.setRandom', [true])}><FontAwesome name="random" /><span className="tooltip">Shuffle</span></a>
 		}
 		return button;
 	}
@@ -57,7 +57,7 @@ class FullPlayer extends React.Component{
 	renderRepeatButton(){
 		var button = <a className="has-tooltip" onClick={() => this.props.mopidyActions.instruct('tracklist.setRepeat', [true])}><FontAwesome name="repeat" /><span className="tooltip">Repeat</span></a>
 		if( this.props.repeat ){
-			button = <a className="active has-tooltip" onClick={() => this.props.mopidyActions.instruct('tracklist.setRepeat', [false])}><FontAwesome name="repeat" /><span className="tooltip">Repeat</span></a>
+			button = <a className="active has-tooltip" onClick={() => this.props.mopidyActions.instruct('tracklist.setRepeat', [true])}><FontAwesome name="repeat" /><span className="tooltip">Repeat</span></a>
 		}
 		return button;
 	}

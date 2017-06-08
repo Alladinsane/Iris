@@ -90,7 +90,7 @@ class TrackList extends React.Component{
 
 	handleDoubleClick(e,index){
 		if (this.props.context_menu) this.props.uiActions.hideContextMenu()
-		this.playTracks()
+		
 	}
 
 	handleMouseDown(e,index){

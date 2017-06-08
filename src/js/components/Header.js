@@ -48,6 +48,7 @@ export default class Header extends React.Component{
 				<Icon name={ this.props.icon } />
 				<SidebarToggleButton />
 				<h1>{ this.props.title }</h1>
+                                <h2><a href="http://iconradio.local:8000/stream" target="_blank">Listen Live! Click Here!</a></h2>
 				{this.renderOptions()}
 			</header>
 		);

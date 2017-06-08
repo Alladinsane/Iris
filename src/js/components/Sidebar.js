@@ -33,7 +33,7 @@ class Sidebar extends React.Component{
 		        		<section>
 							<Link activeClassName="active" to={global.baseURL+"queue"}>
 								<Icon name="play" className="white" />
-								Now playing
+								Now Playing
 							</Link>
 						</section>
 

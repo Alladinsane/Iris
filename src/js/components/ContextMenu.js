@@ -327,39 +327,6 @@ class ContextMenu extends React.Component{
 
 	renderItems(){
 		var context = this.getContext()
-
-		var play_uris = (
-			<span className="menu-item-wrapper">
-				<a className="menu-item" onClick={e => this.playURIs(e)}>
-					<span className="label">Play</span>
-				</a>
-			</span>
-		)
-
-		var play_playlist = (
-			<span className="menu-item-wrapper">
-				<a className="menu-item" onClick={e => this.playPlaylist(e)}>
-					<span className="label">Play</span>
-				</a>
-			</span>
-		)
-
-		var play_queue_item = (
-			<span className="menu-item-wrapper">
-				<a className="menu-item" onClick={e => this.playQueueItem(e)}>
-					<span className="label">Play</span>
-				</a>
-			</span>
-		)
-
-		var play_uris_next = (
-			<span className="menu-item-wrapper">
-				<a className="menu-item" onClick={e => this.addToQueue(e, true)}>
-					<span className="label">Play next</span>
-				</a>
-			</span>
-		)
-
 		var add_to_queue = (
 			<span className="menu-item-wrapper">
 				<a className="menu-item" onClick={e => this.addToQueue(e)}>
@@ -449,9 +416,6 @@ class ContextMenu extends React.Component{
 			case 'album':
 				return (
 					<div>
-						{play_uris}
-						{play_uris_next}
-						{add_to_queue}
 						{this.canBeInLibrary() ? toggle_in_library : null}
 						{go_to_artist}
 						{copy_uris}
@@ -462,7 +426,6 @@ class ContextMenu extends React.Component{
 			case 'artist':
 				return (
 					<div>
-						{start_radio}
 						{this.canBeInLibrary() ? toggle_in_library : null}
 						{context.source == 'spotify' ? go_to_recommendations : null}
 						{copy_uris}
@@ -484,7 +447,6 @@ class ContextMenu extends React.Component{
 			case 'queue-track':
 				return (
 					<div>
-						{play_queue_item}
 						{add_to_playlist}
 						{copy_uris}
 						{remove_from_queue}
@@ -509,8 +471,6 @@ class ContextMenu extends React.Component{
 			default:
 				return (
 					<div>
-						{play_uris}
-						{play_uris_next}
 						{add_to_queue}
 						{add_to_playlist}
 						{context.source == 'spotify' ? start_radio : null}
